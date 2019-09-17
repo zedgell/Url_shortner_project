@@ -1,29 +1,30 @@
 <div class="container">
-  <% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %>"><%= value %></div>
-  <% end %>
-  <p>Enter likn for shortner</p>
-  <%= form_for Link.new, url: '/link' do |f| %>
-    <%= f.text_area :original_url  %>
-    <%=  f.submit "Get short url" %>
-  <% end %>
-  <br>
-  <br>
-  <h3>Top 100 URLs!</h3>
-  <br>
-  <table>
-    <tr>
-      <td>Title</td>
-      <td>Url</td>
-    </tr>
-    <% @links.each do |link| %>
-      <% @url_extension = link.id.to_s(36) %>
-      <% @host = request.domain %>
-      <% @short_url = "https://url-shortener-zedgell.herokuapp.com/#{@url_extension}" %>
-      <tr>
-        <td><%= link.title.truncate_words(4) %></td>
-        <td><%= link_to("#{@short_url}", @short_url) %></td>
-      </tr>
-    <% end %>
-  </table>
+  <center>
+	  <% flash.each do |key, value| %>
+	    <div class="alert alert-<%= key %>"><%= value %></div>
+	  <% end %>
+	  <p>Enter link to be shortened</p>
+	  <%= form_for Link.new, url: '/link' do |f| %>
+	    <%= f.text_area :original_url  %>
+	    <%=  f.submit "Get short url" %>
+	  <% end %>
+	  <br>
+	  <br>
+	  <h3>Top 100 URLs!</h3>
+	  <table>
+	    <tr>
+	      <td>Title</td>
+	      <td>Url</td>
+	    </tr>
+	    <% @links.each do |link| %>
+	      <% @url_extension = link.id.to_s(36) %>
+	      <% @host = request.domain %>
+	      <% @short_url = "https://url-shortener-zedgell.herokuapp.com/#{@url_extension}" %>
+	      <tr>
+	        <td><%= link.title.truncate_words(4) %></td>
+	        <td><%= link_to("#{@short_url}", @short_url) %></td>
+	      </tr>
+	    <% end %>
+	  </table>
+  </center>
 </div>

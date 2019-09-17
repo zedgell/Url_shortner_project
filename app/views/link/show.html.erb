@@ -2,11 +2,11 @@
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
-  <p> Here is your short links </p>
+  <p> Here is your short link </p>
   <table>
     <tr>
-      <td>Title</td>
-      <td>Url</td>
+      <td><h3>Title</h3></td>
+      <td><h3>Url</h3></td>
     </tr>
     <% @yourlink.each do |link| %>
       <% @url_extension = link.id.to_s(36) %>

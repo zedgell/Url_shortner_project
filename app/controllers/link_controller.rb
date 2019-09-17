@@ -1,8 +1,10 @@
 class LinkController < ApplicationController
+  def top
+    render json: Link.order("total_count DESC").order("updated_at DESC").limit(100)
+  end
 
   def index
     @top = Link.order("total_count DESC").order("updated_at DESC").limit(100)
-    render json: @top
   end
 
   def show

@@ -4,8 +4,6 @@ class LinkController < ApplicationController
   end
 
   def show
-    @original_url = find_original_url
-    @yourlinks = Link.where(original_url: @original_url )
     @yourlink = Link.order("updated_at DESC").limit(1)
   end
 
@@ -16,7 +14,6 @@ class LinkController < ApplicationController
     if @ex_url
       @ex_url.increment(:total_count)
       @ex_url.save!
-      return @ex_url
       redirect_to @ex_url
     else
       begin
@@ -27,7 +24,6 @@ class LinkController < ApplicationController
         if @link.save
           flash[:success] = 'Your url was successfully shortened'
           GetTitleJob.perform_now(@link)
-          return @link
           redirect_to @link
         else
           redirect_to 'link/index'
@@ -63,11 +59,5 @@ class LinkController < ApplicationController
       end
     end
     return false
-  end
-
-  def find_original_url
-    @link = create
-    @original_url = @link.original_url
-    return @original_url
   end
 end

@@ -11,7 +11,7 @@
     <% @links.each do |link| %>
       <% @url_extension = link.id.to_s(36) %>
       <% @host = request.domain %>
-      <% @short_url = "#{@host}/#{@url_extension}" %>
+      <% @short_url = "https://url-shortener-zedgell.herokuapp.com/#{@url_extension}" %>
       <tr>
         <td><%= link.title.truncate_words(4) %></td>
         <td><%= link_to("#{@short_url}", @short_url) %></td>

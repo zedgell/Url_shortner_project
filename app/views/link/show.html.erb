@@ -10,7 +10,7 @@
     </tr>
     <% links = links.limit(2) %>
     <% @links.each do |link| %>
-      <% @url_extension = link.id.to_s(40) %>
+      <% @url_extension = links.id.to_s(40) %>
       <% @host = request.domain %>
       <% @short_url = "https://url-shortener-zedgell.herokuapp.com/#{@url_extension}" %>
       <tr>

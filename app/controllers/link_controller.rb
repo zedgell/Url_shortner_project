@@ -1,9 +1,10 @@
 class LinkController < ApplicationController
   def index
+    @links = Link.order("total_count DESC").order("updated_at DESC").limit(100)
   end
 
   def show
-    @links = Link.order("total_count DESC").order("updated_at DESC").limit(100)
+    @yourlink = Link.order("updated_at DESC").limit(1)
   end
 
   def create

@@ -4,6 +4,8 @@ class LinkController < ApplicationController
   end
 
   def show
+    @original_url = find_original_url
+    @yourlinks = Link.where(original_url: @original_url )
     @yourlink = Link.order("updated_at DESC").limit(1)
   end
 
@@ -67,4 +69,5 @@ class LinkController < ApplicationController
     @link = create
     @original_url = @link.original_url
     return @original_url
+  end
 end

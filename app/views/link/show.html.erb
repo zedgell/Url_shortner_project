@@ -10,7 +10,7 @@
     </tr>
     <% @links.each do |link| %>
       <% @url_extension = link.id.to_s(36) %>
-      <% @host = request.host_with_port %>
+      <% @host = request.domain %>
       <% @short_url = "#{host}/#{@url_extension}" %>
       <tr>
         <td><%= link.title.truncate_words(4) %></td>

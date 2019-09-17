@@ -4,7 +4,7 @@ class LinkController < ApplicationController
   end
 
   def show
-    @yourlinks = Link.where(id = Link.id)
+    @yourlinks = Link.where(id: Link.id)
     @yourlink = Link.order("updated_at DESC").limit(1)
   end
 

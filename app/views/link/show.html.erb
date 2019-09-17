@@ -8,7 +8,7 @@
       <td><h3>Title</h3></td>
       <td><h3>Url</h3></td>
     </tr>
-    <% @yourlink.each do |link| %>
+    <% @yourlinks.each do |link| %>
       <% @url_extension = link.id.to_s(36) %>
       <% @host = request.domain %>
       <% @short_url = "https://url-shortener-zedgell.herokuapp.com/#{@url_extension}" %>

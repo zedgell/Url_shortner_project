@@ -1,13 +1,5 @@
 # Url_Shortner
 # README
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
-
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <h3 align="center">Url Shortner</h3>
@@ -68,7 +60,7 @@ This section should list any major frameworks that you built your project using.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This s how you use the source code.
+This is how you use the source code.
 
 ### Prerequisites
 

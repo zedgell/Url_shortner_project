@@ -4,9 +4,6 @@
   <p align="center">
     A Url Shortner Built With Rails!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
     <a href="https://github.com/zedgell/Url_shortner_project/issues">Report Bug</a>
     ·
     <a href="https://github.com/zedgell/Url_shortner_project/issues">Request Feature</a>

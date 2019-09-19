@@ -13,7 +13,7 @@
       <% @host = request.domain %>
       <% @short_url = "https://url-shortener-zedgell.herokuapp.com/#{@url_extension}" %>
       <tr>
-        <td><%= link.title.truncate_words(4) %></td>
+        <td><%= link.title.nil? ? 'N/A' : link.title.truncate_words(4) %></td>
         <td><%= link_to("#{@short_url}", @short_url) %></td>
       </tr>
     <% end %>

@@ -1,6 +1,3 @@
-# Url_Shortner
-# README
-<br />
 <p align="center">
   <h3 align="center">Url Shortner</h3>
 

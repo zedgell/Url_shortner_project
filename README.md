@@ -1,14 +1,3 @@
-# Url_Shortner
-# README
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
-
-<!-- PROJECT LOGO -->
-<br />
 <p align="center">
   <h3 align="center">Url Shortner</h3>
 
